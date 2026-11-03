@@ -1,0 +1,3 @@
+PASS: 3501 timeline samples; 8 sprites; landing, hold, return.
+PASS: 128 transparent boundary checks (4 sizes x 4 DPIs x 8 poses/times).
+PASS: settings round trip (position, size, volume, mute), invalid-value recovery.

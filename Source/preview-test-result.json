@@ -1,0 +1,22 @@
+{
+  "result": "PASS",
+  "details": {
+    "sprites": 8,
+    "audioReady": 1,
+    "audioDuration": 1.43,
+    "overflow": false
+  },
+  "celebration": {
+    "running": true,
+    "audioTime": 0.300588,
+    "audioPaused": false,
+    "status": "RONALDO · 7 · SIUUUU!"
+  },
+  "idle": {
+    "running": false,
+    "disabled": false,
+    "status": "准备好了，点击再庆祝一次"
+  },
+  "mute": true,
+  "mobileOverflow": false
+}

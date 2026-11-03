@@ -1,0 +1,4 @@
+// Optional development-only preview server; the delivered HTML also works offline.
+const http=require('node:http'),fs=require('node:fs'),path=require('node:path');
+const root=path.resolve(__dirname,'..');
+http.createServer((req,res)=>{try{const relative=decodeURIComponent(new URL(req.url,'http://localhost').pathname).replace(/^\/+/, '')||'效果预览.html';const file=path.resolve(root,relative);if(!file.startsWith(root+path.sep)){res.writeHead(403).end();return}const mime={'.html':'text/html; charset=utf-8','.png':'image/png','.gif':'image/gif','.wav':'audio/wav'};fs.readFile(file,(err,data)=>{if(err){res.writeHead(404).end();return}res.writeHead(200,{'Content-Type':mime[path.extname(file)]||'application/octet-stream'});res.end(data)})}catch{res.writeHead(400).end()}}).listen(8765,'127.0.0.1',()=>console.log('Preview ready on http://127.0.0.1:8765'));
